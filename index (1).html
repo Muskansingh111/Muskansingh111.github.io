@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muskan Singh | Software Engineer</title>
+<meta name="description" content="Portfolio of Muskan Singh, backend software engineer.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1a1d2b;--card:#21253a;--text:#f2f2f7;--muted:#a9adc4;--accent:#7c3aed;--accent2:#c4b5fd;--line:#33385a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f5fb;--card:#fff;--text:#1a1d2b;--muted:#5b5f78;--accent:#6d28d9;--accent2:#5b21b6;--line:#dcd9ee}}
+:root[data-theme="dark"]{--bg:#1a1d2b;--card:#21253a;--text:#f2f2f7;--muted:#a9adc4;--accent:#7c3aed;--accent2:#c4b5fd;--line:#33385a}
+:root[data-theme="light"]{--bg:#f6f5fb;--card:#fff;--text:#1a1d2b;--muted:#5b5f78;--accent:#6d28d9;--accent2:#5b21b6;--line:#dcd9ee}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,sans-serif;line-height:1.6}
+a{color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;gap:16px;flex-wrap:wrap}
+.logo{font-weight:700;font-size:1.15rem;text-decoration:none}
+.logo span{color:var(--accent2)}
+nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem}
+nav a:hover,nav a:focus-visible{color:var(--text)}
+button.btn{font:inherit;cursor:pointer}
+button.toggle{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:20px;padding:6px 14px;font:inherit;font-size:.85rem;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+section{padding:72px 5vw;max-width:1200px;margin:0 auto}
+h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.1;margin:0 0 20px;font-weight:600}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);margin:0 0 8px;font-weight:500}
+.sub{color:var(--muted);margin:0 0 32px;max-width:62ch}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;min-height:78vh}
+.hero p.lead{font-size:1.25rem;max-width:36ch;color:var(--muted)}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin:28px 0}
+.btn{display:inline-block;padding:13px 26px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;border-radius:4px;border:2px solid var(--accent)}
+.btn.alt{background:transparent;color:var(--text);border-color:var(--accent)}
+.social{display:flex;gap:12px;flex-wrap:wrap}
+.social a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.85rem;text-decoration:none;color:#fff}
+.code{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92rem;line-height:1.8;overflow-x:auto}
+.code i{font-style:normal;color:var(--accent2)}
+.code b{color:#f5c542;font-weight:400}
+.dots{display:flex;gap:7px;margin-bottom:14px}.dots u{width:11px;height:11px;border-radius:50%;background:var(--line)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 24px;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);background:var(--card);padding:6px 14px;border-radius:20px;font-size:.88rem}
+.skill h3{margin:18px 0 8px;font-size:1rem;font-weight:600}
+.bullets{list-style:none;padding:0;margin:0}
+.bullets li{margin:0 0 14px}
+.bullets li::before{content:"\26A1\FE0F";margin-right:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.card .top{padding:14px;text-align:center;font-weight:600;background:linear-gradient(135deg,#6d28d9,#3b82f6);color:#fff}
+.card .body{padding:20px}
+.card h3{margin:0 0 4px;font-size:1.1rem}
+.date{color:var(--muted);font-size:.85rem;font-weight:600;margin:0 0 12px}
+.card p,.card li{font-size:.92rem;color:var(--muted);margin:0 0 8px}
+.card ul{padding-left:18px;margin:0}
+.edu{border-bottom:1px solid var(--line);padding:18px 0}
+.edu h3{margin:0;font-size:1.3rem;font-weight:500}.edu strong{display:block;margin:4px 0}
+.chip{display:inline-block;background:var(--accent);color:#fff;font-size:.75rem;padding:3px 10px;border-radius:4px;margin:10px 6px 0 0}
+.contact a.big{display:block;font-size:1.5rem;text-decoration:none;margin:4px 0}
+footer{text-align:center;color:var(--muted);padding:32px 5vw;border-top:1px solid var(--line);font-size:.85rem}
+@media(max-width:800px){.hero,.two{grid-template-columns:1fr}.hero{min-height:auto}nav{gap:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#top"><span>&lt;</span> Muskan Singh <span>/&gt;</span></a>
+<nav aria-label="Main">
+<a href="#skills">Skills</a><a href="#experience">Work Experience</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a><a href="#contact">Contact Me</a>
+<a href="Muskan-Singh-Resume.pdf" download>Resume</a>
+<button class="toggle" id="themeBtn" type="button" aria-label="Switch light or dark theme">Theme</button>
+</nav>
+</header>
+
+<main id="top">
+<section class="hero">
+<div>
+<h1>Hi all, I’m Muskan 👋</h1>
+<p class="lead">I’m a backend-focused software engineer who builds reliable APIs and AI-powered tools with Java, Kotlin, Spring Boot and Python.</p>
+<div class="btns"><a class="btn" href="Muskan-Singh-Resume.pdf" download>Download my resume</a><a class="btn alt" href="#contact">Contact me</a><a class="btn alt" href="#projects">See my projects</a></div>
+<div class="social">
+<a href="https://github.com/Muskansingh111" style="background:#333" aria-label="GitHub">GH</a>
+<a href="https://www.linkedin.com/in/muskan-singh-3b726a264" style="background:#0a66c2" aria-label="LinkedIn">in</a>
+</div>
+</div>
+<div class="code" aria-hidden="true">
+<div class="dots"><u></u><u></u><u></u></div>
+<i>const</i> muskan = {<br>
+&nbsp;&nbsp;role: <b>"Software Engineer"</b>,<br>
+&nbsp;&nbsp;degree: <b>"B.Tech, Mathematics &amp; Computing"</b>,<br>
+&nbsp;&nbsp;stack: [<b>"Java"</b>, <b>"Kotlin"</b>, <b>"Spring Boot"</b>, <b>"gRPC"</b>],<br>
+&nbsp;&nbsp;also: [<b>"Python"</b>, <b>"LangChain"</b>, <b>"RAG"</b>],<br>
+&nbsp;&nbsp;openToWork: <i>true</i><br>
+};
+</div>
+</section>
+
+<section id="skills">
+<div class="two">
+<div>
+<h2>What I do</h2>
+<p class="sub">Backend engineer focused on scalable services, clean APIs and practical AI.</p>
+<ul class="bullets">
+<li>Build backend services and gRPC/REST APIs with Kotlin, Java and Spring Boot</li>
+<li>Design workflow integrations between third-party platforms using REST APIs and Zapier</li>
+<li>Model data and write efficient queries in PostgreSQL, MySQL and MongoDB</li>
+<li>Build AI features such as retrieval-augmented document search with LangChain and Gemini</li>
+<li>Refactor and modernize codebases, including Java 11 to Java 17 upgrades</li>
+</ul>
+</div>
+<div class="skill">
+<h2>Proficiency</h2>
+<h3>Languages</h3>
+<ul class="tags"><li>Java</li><li>Kotlin</li><li>Python</li><li>C/C++</li><li>SQL</li><li>JavaScript</li><li>HTML/CSS</li></ul>
+<h3>Frameworks and data</h3>
+<ul class="tags"><li>Spring Boot</li><li>Spring Data JPA</li><li>Hibernate</li><li>gRPC</li><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>Redis</li></ul>
+<h3>Cloud and tools</h3>
+<ul class="tags"><li>AWS S3</li><li>Docker</li><li>Git</li><li>Maven</li><li>Postman</li><li>IntelliJ</li></ul>
+</div>
+</div>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<div class="edu"><h3>Netaji Subhas University of Technology, New Delhi</h3><strong>Bachelor of Technology in Mathematics and Computing</strong><span class="date">Nov 2022 – May 2026</span></div>
+<div class="edu"><h3>LBS Convent School, Kota, Rajasthan</h3><strong>Class 12</strong><span class="date">JEE Main 2022: 98.2 percentile among 1.3 million candidates</span></div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<p class="sub">Three internships across fintech, workflow automation and enterprise retail.</p>
+<div class="grid">
+<article class="card"><div class="top">Stable Money</div><div class="body"><h3>Software Engineering Intern</h3><p class="date">March 2026 – June 2026 · Bengaluru</p>
+<ul><li>Built and improved backend services for PartnerHub using Kotlin, Spring Boot, gRPC and PostgreSQL.</li><li>Designed and integrated gRPC APIs for partner and customer workflows.</li><li>Implemented pagination, filtering and customer aggregation for scalable data handling.</li></ul></div></article>
+<article class="card"><div class="top">Proso.ai</div><div class="body"><h3>Software Engineer Intern</h3><p class="date">Jan 2026 – Mar 2026 · Noida</p>
+<ul><li>Built event-driven integrations between Smartsheet and Freshservice using REST APIs and Zapier to automate data sync.</li><li>Designed backend API workflows between third-party platforms, improving reliability and cutting manual steps.</li></ul></div></article>
+<article class="card"><div class="top">DGLiger</div><div class="body"><h3>Software Engineer Intern</h3><p class="date">June 2025 – July 2025 · Gurugram</p>
+<ul><li>Engineered and optimized REST APIs for the Marks &amp; Spencer ANR Admin Portal with Java, Spring Boot and MongoDB, upgrading the codebase from Java 11 to Java 17.</li><li>Refactored a Spring Boot application to remove duplication and integrated AWS S3 for cloud storage.</li></ul></div></article>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<p class="sub">Self-built projects.</p>
+<div class="grid">
+<article class="card"><div class="body"><h3>LibraFlow</h3><p class="date">Library management backend</p>
+<p>RESTful backend for book borrowing and returns with transactional consistency. JSON APIs follow MVC and Controller-Service-Repository patterns, with exception handling and MySQL integration, validated with Postman.</p>
+<span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Hibernate</span><span class="chip">MySQL</span></div></article>
+<article class="card"><div class="body"><h3>AskMyDocs</h3><p class="date">AI document assistant</p>
+<p>Upload multiple PDFs and ask questions in plain language. A retrieval-augmented generation pipeline pulls relevant context, and a FAISS vector store gives fast similarity search across document embeddings.</p>
+<span class="chip">Python</span><span class="chip">LangChain</span><span class="chip">Gemini API</span><span class="chip">Streamlit</span></div></article>
+</div>
+</section>
+
+<section id="achievements">
+<h2>Achievements</h2>
+<div class="grid">
+<article class="card"><div class="body"><h3>SIH 2024 College Finalist</h3><p>Reached the college-round finals of Smart India Hackathon 2024.</p></div></article>
+<article class="card"><div class="body"><h3>JEE Main 2022</h3><p>98.2 percentile among 1.3 million candidates.</p></div></article>
+<article class="card"><div class="body"><h3>600+ coding problems</h3><p>Solved on CodeChef and LeetCode.</p></div></article>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact me</h2>
+<p class="sub">Have a role or project in mind? My inbox is open.</p>
+<a class="big" href="tel:+918855925769">+91 88559 25769</a>
+<a class="big" href="mailto:muskansingh2802@gmail.com">muskansingh2802@gmail.com</a>
+<div class="social" style="margin-top:18px">
+<a href="https://github.com/Muskansingh111" style="background:#333" aria-label="GitHub">GH</a>
+<a href="https://www.linkedin.com/in/muskan-singh-3b726a264" style="background:#0a66c2" aria-label="LinkedIn">in</a>
+</div>
+</section>
+</main>
+<footer>© 2026 Muskan Singh</footer>
+<script>
+(function(){
+var r=document.documentElement,k="theme";
+try{var s=localStorage.getItem(k);if(s)r.setAttribute("data-theme",s)}catch(e){}
+document.getElementById("themeBtn").addEventListener("click",function(){
+var dark=r.getAttribute("data-theme")?r.getAttribute("data-theme")==="dark":!window.matchMedia("(prefers-color-scheme: light)").matches;
+var n=dark?"light":"dark";r.setAttribute("data-theme",n);
+try{localStorage.setItem(k,n)}catch(e){}
+});
+})();
+</script>
+</body>
+</html>
